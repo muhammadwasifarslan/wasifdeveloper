@@ -1,7 +1,36 @@
-# Deployed
-https://silly-northcutt-875f2c.netlify.app/#
+# 👨‍💻 Personal DevFolio (2.0)
 
-# PortFolio_Website
-Complete Portfolio Website with Bootstrap - HTML/CSS In this project, we are going to learn and build how to create a complete portfolio website with bootstrap using HTML and CSS. We will understand everything from scratch. 
+### _Personal Portfolio built using ReactJs and Animation libraries, hope you like it. Tweak it and use it !!_
 
-## To execute this project just open index.html file in the browser.
+### Demo Video (2.0) :link:https://youtu.be/soi-rnv9dDQ
+
+### Link :link: https://developerjunaid.com/
+
+## Images
+
+<img src='./project_images/portfolio.png/' />
+
+## Mobile Responsive
+
+<img src='./project_images/mobile.png/' />
+
+## Run Locally
+
+- Run this command `git clone https://github.com/developer-junaid/DeveloperFolio.git`
+- You are now in the dev environment and you can play around
+
+## Tech Stack
+
+- HTML5
+- CSS3
+- Javascript ES6
+- React js
+
+- Animation Libraries
+- - react-scroll
+- - aos
+- - custom css animation
+- - framer-motion
+
+- Firebase
+- Github Actions
