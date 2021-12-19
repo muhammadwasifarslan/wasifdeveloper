@@ -49,6 +49,9 @@ const Home = () => {
   const [showHeadingOne, setShowHeadingOne] = useState(true);
   const [showHeadingTwo, setShowHeadingTwo] = useState(false);
   const [showHeadingThree, setShowHeadingThree] = useState(false);
+  const [showHeadingFour, setShowHeadingFour] = useState(false);
+  const [showHeadingFive, setShowHeadingFive] = useState(false);
+
 
   // Timeout
   useEffect(() => {
@@ -57,17 +60,39 @@ const Home = () => {
         setShowHeadingOne(false);
         setShowHeadingThree(false);
         setShowHeadingTwo(true);
+        setShowHeadingFour(false);
+        setShowHeadingFive(false);
+
       } else if (showHeadingTwo) {
         setShowHeadingOne(false);
         setShowHeadingTwo(false);
         setShowHeadingThree(true);
+        setShowHeadingFour(false);
+        setShowHeadingFive(false);
+
+      } else if (showHeadingThree) {
+        setShowHeadingOne(false);
+        setShowHeadingTwo(false);
+        setShowHeadingThree(false);
+        setShowHeadingFour(true);
+        setShowHeadingFive(false);
+
+      } else if (showHeadingFour) {
+        setShowHeadingOne(false);
+        setShowHeadingTwo(false);
+        setShowHeadingThree(true);
+        setShowHeadingFour(false);
+        setShowHeadingFive(true);
+
       } else {
         setShowHeadingOne(true);
         setShowHeadingTwo(false);
         setShowHeadingThree(false);
+        setShowHeadingFour(false);
+        setShowHeadingFive(false);
       }
     }, 3000);
-  }, [showHeadingOne, showHeadingTwo]);
+  }, [showHeadingOne, showHeadingTwo, showHeadingThree, showHeadingFour, showHeadingFive]);
 
   return (
     <section className="home-container" id="home" name="home">
@@ -79,7 +104,7 @@ const Home = () => {
       >
         <h4 className="welcome-content">WELCOME TO MY WORLD</h4>
         <br />
-        <h1 className="main-heading">Hi, I’m Junaid</h1>
+        <h1 className="main-heading">Hi, I’m Wasif</h1>
         {/* Animate Skill Content */}
         <div className="skill-animation">
           <AnimatePresence>
@@ -91,7 +116,7 @@ const Home = () => {
                 animate="animate"
                 initial="initial"
               >
-                Full Stack Web Developer
+                DevOps Engineer
               </motion.h2>
             )}
           </AnimatePresence>
@@ -105,7 +130,7 @@ const Home = () => {
                 animate="animate"
                 initial="initial"
               >
-                Fiverr Level One Seller
+                Full Stack Web Developer
               </motion.h2>
             )}
           </AnimatePresence>
@@ -123,6 +148,35 @@ const Home = () => {
               </motion.h2>
             )}
           </AnimatePresence>
+
+          <AnimatePresence>
+            {showHeadingFour && (
+              <motion.h2
+                className="skill-content"
+                variants={childrenVariants}
+                exit="exit"
+                animate="animate"
+                initial="initial"
+              >
+                Data Scientist
+              </motion.h2>
+            )}
+          </AnimatePresence>
+          
+          <AnimatePresence>
+            {showHeadingFive && (
+              <motion.h2
+                className="skill-content"
+                variants={childrenVariants}
+                exit="exit"
+                animate="animate"
+                initial="initial"
+              >
+                Fiverr Level One Seller
+              </motion.h2>
+            )}
+          </AnimatePresence>
+          
         </div>
         {/* // */}
         <Link
